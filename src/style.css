@@ -1,6 +1,9 @@
 body
 {
-    background-color: aqua;
+    /* background-color: aqua; */
+    /* background-image: url("pathfinderchilis.gif"); */
+    /* background-image: url("zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg"); */
+    background-image: url("jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 header
 {
@@ -8,6 +11,8 @@ header
     align-items: center;
     justify-content: center;
     padding: 10px;
+    /* background-image: url("zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg"); */
+    /* background-image: url("pathfinderchilis.gif"); */
     
 }
 nav
@@ -26,6 +31,12 @@ header > nav > button
     padding: 10px;
     outline: none;
     border: none;
+    background: transparent;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+    color: yellow;
+    /* border-radius: 33%; */
 }
 #bg-video {
     position: fixed;

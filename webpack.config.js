@@ -23,8 +23,19 @@ module.exports =
     {
         rules:[
             {
+                test:/\.(mp4|webm|ogg)$/,
+                type:"asset/resource",
+                generator:{
+                    
+                }
+            },
+            {
                 test:/\.css$/i,
                 use:["style-loader","css-loader"],
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                type: "asset/resource",
             },
         ],
     },

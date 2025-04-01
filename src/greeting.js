@@ -15,25 +15,25 @@ function navigate(element)
     }
 }
 
-function add_video(select_element,create_element, before=null, url)
+function content(page_content)
 {
-    const parent_element = document.querySelector(`${select_element}`)
-    const created_element = document.createElement('video')
-    create_element.setAttribute("id", "bg-video")
-    const new_element = document.createElement('source')
+    content_element = document.querySelector("#content")
+    content_element.appendChild(page_content)
+}
+// Make a create function named create_functions_list
 
-    new_element.attributes.src = url
-    new_element.attributes.types = "video/mp4"
-    created_element.append(new_element)
-
-    if (before != null)
+function create_function_list(function_names)
+{
+    for (let i = 0; i < function_names.length; i++)
     {
-        parent_element.insertBefore(before, created_element)
-    }
-    else
-    {
-        parent_element.append(new_element)
+        function function_template()
+        {
+            // insert templates or the content here
+        }
+        global[function_names[i]] = function_template
     }
 }
+// This functions should build functions from a loop of list of strings:
+// Export that functions
 
-export {navigate, add_video};
+export {navigate,content, create_function_list};
