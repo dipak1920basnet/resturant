@@ -15,34 +15,22 @@ function navigate(element)
     }
 }
 
+// Added a page content 
 function content(page_content)
 {
     let content_element = document.querySelector("#content")
-
-    content_element.appendChild(page_content)
+    let titles = Object.keys(page_content)
+    for (let i = 0; i < titles.length; i++)
+    {
+        const new_content = document.createElement('div')
+        new_content.setAttribute('class',"new_content")
+        const title = document.createElement('h2')
+        title.innerText = titles[i]
+        new_content.appendChild(title)
+        const contents = document.createElement('p')
+        contents.innerText = page_content[titles[i]]
+        new_content.appendChild(contents)
+        content_element.appendChild(new_content)
+    }
 }
-// Make a create function named create_functions_list
-
-// function create_function_list(function_names)
-// {
-//     for (let i = 0; i < function_names.length; i++)
-//     {
-//         function function_template(title, content)
-//         {
-//             // insert templates or the content here
-//             let contents = document.createElement("div")
-//             contents.setAttribute("class",".contents")
-//             let new_title = document.createElement("title")
-//             let new_content = document.createElement("p")
-//             new_title.innerText = title
-//             new_content.innerText = content
-//             contents.appendChild(new_title)
-//             contents.appendChild(new_content)
-//         }
-//         global[function_names[i]] = function_template
-//     }
-// }
-// This functions should build functions from a loop of list of strings:
-// Export that functions
-
-export {navigate,content, create_function_list};
+export {navigate,content};
