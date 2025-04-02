@@ -1,9 +1,8 @@
 function navigate(element)
 {
     const button = document.createElement('button')
-    button.setAttribute('id',`${element}`)
+    button.setAttribute("onclick", `window.location.href='#${element}'`);
     button.textContent = element;
-
 
     const nav = document.querySelector("header nav");
     if (nav)
@@ -85,6 +84,7 @@ function content(page_content)
         const new_content = document.createElement('div')
         new_content.setAttribute('class',"new_content")
         const title = document.createElement('h2')
+        title.setAttribute('id',`${titles[i]}`)
         title.innerText = titles[i]
         new_content.appendChild(title)
         if (titles[i] ===  "reservation")
