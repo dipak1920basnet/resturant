@@ -1,18 +1,10 @@
-body
-{
-    /* background-color: aqua; */
-    /* background-image: url("pathfinderchilis.gif"); */
-    /* background-image: url("zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg"); */
-    background-image: url("jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-header
+header, footer
 {
     display: flex;
     align-items: center;
+    background-color: rebeccapurple;
     justify-content: center;
     padding: 10px;
-    /* background-image: url("zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg"); */
-    /* background-image: url("pathfinderchilis.gif"); */
     
 }
 nav
@@ -21,9 +13,17 @@ nav
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    width: 60%;
+    width: 100%;
     position: relative;
     z-index: 1;
+}
+.nav_bar
+{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
 }
 header > nav > button
 {
@@ -38,12 +38,58 @@ header > nav > button
     color: yellow;
     /* border-radius: 33%; */
 }
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover; /* Ensures video covers entire background */
-    z-index: -1; /* Puts the video behind other content */
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.new_content
+{
+    margin: 20px;
+    padding: 10px;
+}
+.new_content > h2
+{
+    color: orange;
+    font-size:32px;
+}
+.Home_ 
+{
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: column;
+    background-image:url("banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.Home_ > div{
+    margin-top: 30px;
+    width: 60%;
+}
+.Us_ > div
+{
+    display: flex;
+}
+#content
+{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#restinfo
+{
+    height: 100%;
+    width: 3400px;
+    padding: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.row
+{
+background-image: url("zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg");
+background-size: 100% 100%;
+padding: 20px;
+    /* background-image: url("jay-wennington-N_Y88TWmGwA-unsplash.jpg"); */
 }
