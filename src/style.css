@@ -69,6 +69,10 @@ header > nav > button
     margin-top: 30px;
     width: 60%;
 }
+.Us_
+{
+    padding: 20px;
+}
 .Us_ > div
 {
     display: flex;
@@ -92,4 +96,24 @@ background-image: url("zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg");
 background-size: 100% 100%;
 padding: 20px;
     /* background-image: url("jay-wennington-N_Y88TWmGwA-unsplash.jpg"); */
+}
+.Us_ > div > .gal
+{
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+}
+.Galary_ > div > .gal
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-column: -3 / -1;  */
+}
+.gal > img
+{
+    height: 60%;
+    width:  100%;
 }

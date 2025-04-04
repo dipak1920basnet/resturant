@@ -111,7 +111,7 @@ function content(page_content)
     }
 }
 
-function insert_image(tag_id_or_class, url)
+function insert_image(tag_id_or_class, url_list)
 {
   let one = document.querySelector(`${tag_id_or_class} > div`)
   if (!one) {
@@ -120,10 +120,14 @@ function insert_image(tag_id_or_class, url)
   }
   let two = document.createElement('div')
   two.setAttribute('class', 'gal')
-  let images = document.createElement('img')
-  images.src = url
-  images.alt = "Images"
-  two.appendChild(images)
+  for (let i = 0; i< url_list.length; i++)
+  {
+    let images = document.createElement('img')
+    images.src = url_list[i]
+    images.alt = "Images"
+    two.appendChild(images)
+  }
+  
   one.appendChild(two)
 }
 export {navigate,content, make_reservation, insert_image};

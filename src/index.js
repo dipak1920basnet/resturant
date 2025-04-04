@@ -1,23 +1,15 @@
-import "./style.css"
+import "./style.css";
 import {navigate,content,make_reservation,insert_image} from "./greeting.js";
-
-// Gpt code starts
-const images = require.context('./', false, /\.png$/); 
-
-let loadedImages = [];
-
-for (let i = 1; i <= 10; i++) {
-    const imagePath = `./img-${i}.png`; 
-    if (images.keys().includes(imagePath)) {
-        loadedImages.push(images(imagePath));
-        console.log(`Loaded: ${imagePath}`);
-    } else {
-        console.error(`Image ${imagePath} not found.`);
-    }
-}
-
-
-// Gpt code ends 
+import img1 from './img-1.png';
+import img2 from './img-2.png';
+import img3 from './img-3.png';
+import img4 from './img-4.png';
+import img5 from './img-5.png';
+import img6 from './img-6.png';
+import img7 from './img-7.png';
+import img8 from './img-8.png';
+import img9 from './img-9.png';
+import img10 from './img-10.png';
 
 const nav_key_content = {"Home":`Welcome to Savory Haven, a warm and inviting family-owned restaurant where every dish is crafted with passion and care. 
     Located in the heart of the city, we take pride in serving fresh, flavorful meals made from locally sourced ingredients. 
@@ -54,9 +46,19 @@ for (let i = 0; i < nav_bar.length; i++)
         navigate(nav_bar[i],"footer",".nav_bar");
     }
 
-loadedImages.forEach(imgPath => {
-    insert_image('.Galary_', imgPath)
-});
+let image_list = [img1,img2,img3,img4,img5,img6,img7,img8,img9]
+insert_image(".Galary_" , image_list)
+insert_image(".Us_", [img10])
+// insert_image(".Galary_" , [img2])
+// insert_image(".Galary_" , [img3])
+// insert_image(".Galary_" , [img4])
+// insert_image(".Galary_" , [img5])
+// insert_image(".Galary_" , [img6])
+// insert_image(".Galary_" , [img7])
+// insert_image(".Galary_" , [img8])
+// insert_image(".Galary_" , [img9])
+// insert_image(".Galary_" , img10)
+// insert_image(".Galary_" , `img${2}`)
 
 let content_element = document.querySelector("#content")
 content_element.appendChild(make_reservation())
